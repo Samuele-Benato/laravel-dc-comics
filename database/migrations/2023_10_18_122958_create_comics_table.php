@@ -17,10 +17,11 @@ return new class extends Migration {
             $table->string('title');
             $table->text('description');
             $table->text('thumb');
-            $table->float('price', 5, 2);
+            $table->string('price', 10);
             $table->string('series', 50);
             $table->date('sale_date');
             $table->string('type', 50);
+            $table->timestamps();
         });
     }
 
