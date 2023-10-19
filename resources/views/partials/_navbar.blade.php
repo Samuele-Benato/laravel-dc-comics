@@ -16,6 +16,10 @@
                     <a class="nav-link {{ Route::currentRouteName() == 'comics.index' ? 'fw-bold' : '' }}"
                         href="{{ route('comics.index') }}">Comics</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ Route::currentRouteName() == 'comics.create' ? 'fw-bold' : '' }}"
+                        href="{{ route('comics.create') }}">Crea</a>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">Dropdown</a>

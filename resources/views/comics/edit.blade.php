@@ -2,8 +2,11 @@
 
 @section('main-content')
     <section class="container mt-5">
-        <a href="{{ route('comics.index') }}" class="btn btn-success">
+        <a class="btn btn-dark" href="{{ route('comics.index') }}">
             Torna ai Comics
+        </a>
+        <a class="btn btn-warning" href="{{ route('comics.show', $comic) }}">
+            Torna al dettaglio
         </a>
 
         <h1 class="my-3">Modifica il fumetto</h1>

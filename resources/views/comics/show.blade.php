@@ -30,12 +30,18 @@
                         <strong>Description: </strong> {{ $comic->description }}
                     </div>
                     <div class="col-12">
-                        <a class="me-3" href="{{ route('comics.index', $comic) }}">
-                            Torna alla lista
+                        <a class="btn btn-dark btn-sm" href="{{ route('comics.index') }}">
+                            Torna ai Comics
                         </a>
-                        <a href= "{{ route('comics.edit', $comic) }}">
+                        <a class="btn btn-warning btn-sm" href= "{{ route('comics.edit', $comic) }}">
                             Modifica
                         </a>
+                        <form class="d-inline-block ms-auto" action="{{ route('comics.destroy', $comic) }}" method="POST"
+                            class="mx-1">
+                            @method('DELETE')
+                            @csrf
+                            <button class="btn btn-danger btn-sm">Elimina</button>
+                        </form>
                     </div>
                 </div>
             </div>
